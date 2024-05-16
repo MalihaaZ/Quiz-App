@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/instatue.css') }}">
+</head>
+<body>
+    <header id="homepage_header">
+        <h1 id="homepage_instatue">Instatue</h1>
+        <nav id="homepage_nav">
+            <a href="{{ url_for('login') }}">Log in</a>
+            <a href="{{ url_for('signup') }}">Sign up</a>
+        </nav>
+    </header>
+    <section id="section1">
+        <h2 id="heading1">Make learning fun, adaptive and insightful</h2>
+        <p id="paragraph1">Students are more confident because of the extra practice they receive with Instatue Math Game. Students typically score higher on math benchmarks.</p>
+        <p id="paragraph_let">Let's get started!</p>
+        <img src="{{ url_for('static', filename='images/p1.png') }}" alt="p1" id="picture1">
+    </section>
+
+    <h1 id="heading_how">How Instatue works</h1>
+    <div id="image-container">
+        <img src="{{ url_for('static', filename='images/p8.png') }}" alt="p8" id="picture8">
+        <img src="{{ url_for('static', filename='images/p10.png') }}" alt="p10" id="picture10">
+        <img src="{{ url_for('static', filename='images/p9.png') }}" alt="p9" id="picture9">
+    </div>
+    <div id="heading-container">
+        <h3 id="heading2">Students play games</h3>
+        <h3 id="heading3">Students answer questions</h3>
+        <h3 id="heading4">Teachers motivate & track learning</h3>
+    </div>
+    <div id="paragraph-container">
+        <p id="paragraph2">In Instatue study, students can collect points to increase their levels and even become the highest honoree - the king.</p>
+        <p id="paragraph3">In interactive exercises, students answer questions to make progress and continually improve their learning abilities.</p>
+        <p id="paragraph4">Student's data appears in teacher dashboard, which will help to better understand students' needs and deliver assessments.</p>
+    </div>
+
+    <footer>2024@Instatue</footer>
+</body>
+</html> 

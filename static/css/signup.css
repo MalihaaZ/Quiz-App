@@ -1,0 +1,74 @@
+/* Ensure the container takes up the full height */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Style the form */
+.border {
+    padding: 30px;
+    border: 1px solid #236B8E;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 400px;
+}
+
+.header {
+    margin-bottom: 20px;
+}
+
+.word {
+    color: #236B8E;
+    font-weight: bold;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.textbox {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff; /* Set background color to white */
+}
+
+.btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #236B8E;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #1d5b7a;
+}
+
+.bottom {
+    margin-top: 15px;
+    color: #236B8E;
+    text-align: center;
+}
+
+.bottom a {
+    color: #236B8E;
+    text-decoration: none;
+}
+
+.bottom a:hover {
+    text-decoration: underline;
+}
+
+#signup_body {
+    background: url("../images/p3.jpeg") fixed;
+    background-size: cover;
+}

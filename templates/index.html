@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{{ quiz_title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body id="body_browse">
+    <header id="header_browse">
+        <a href="index.html" id="browse_instatue">Instatue</a>
+        <nav id="nav_browse">
+            <a href="/">Logout</a>
+            <a href="{{ url_for('display_exercise') }}">Exercise</a>
+            <a href="{{ url_for('points') }}">Points</a>
+            <a href="{{ url_for('community') }}">Community</a>
+        </nav>
+    </header>
+
+    <div class="main-content">
+        <h1 class="mt-5" aria-label="Quiz Results">{{ quiz_title }}</h1>
+        <div class="result-summary">
+            <h2 aria-label="Number-questions">
+                This test has {{ num_questions }} {{ 'question' if num_questions == 1 else 'questions' }}
+            </h2>
+        </div>
+        <h3 aria-label="Questions">Questions:</h3>
+        <form method="POST" action="/submit">
+            {% for question in questions %}
+            <ul class="list-group mt-3">
+                <li class="list-group-item question-item">
+                    <p class="question-text">{{ question['question'] }}</p>
+                    <div class="question" id="{{ question['question_id'] }}">
+                        <input type="hidden" name="first_modified_{{ question['question_id'] }}"
+                            id="first_modified_{{ question['question_id'] }}" value="{{ current_timestamp }}">
+                        <input type="hidden" name="last_modified_{{ question['question_id'] }}"
+                            id="last_modified_{{ question['question_id'] }}" value="{{ current_timestamp }}">
+                        <ul class="answer-list">
+                            {% for choice in question['choices'] %}
+                            <li class="list-group-item">
+                                <input type="checkbox" class="form-check-input" name="{{ question['question'] }}"
+                                    value="{{ choice }}" id="{{ question['question_id'] }}_{{ choice }}"
+                                    style="display: none;">
+                                <label class="answer-text" for="{{ question['question_id'] }}_{{ choice }}">{{ choice
+                                    }}</label>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </li>
+                {% endfor %}
+            </ul>
+            <div class="mt-4 text-center">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+
+<script>
+    $(document).ready(function () {
+        $("input[type='checkbox']").change(function () {
+            // Toggle the selected-answer class when the checkbox changes
+            $(this).closest('li').toggleClass('selected-answer', this.checked);
+
+            // Find the closest question div to the changed checkbox
+            var questionDiv = $(this).closest('.question');
+
+            // Get the question ID from the question div
+            var questionId = questionDiv.attr('id');
+
+            // Find the hidden input field for firstModifiedField and lastModifiedField
+            var firstModifiedField = $("#first_modified_" + questionId);
+            var lastModifiedField = $("#last_modified_" + questionId);
+
+            // Check if the firstModifiedField is empty before updating
+            if (!firstModifiedField.val()) {
+                // Update the first modified timestamp for this question
+                var now = new Date().toISOString().slice(0, 19).replace('T', ' ');
+                firstModifiedField.val(now);
+            }
+
+            // Update the last modified timestamp for this question
+            var now = new Date().toISOString().slice(0, 19).replace('T', ' ');
+            lastModifiedField.val(now);
+        });
+
+        $("#submit-button").click(function () {
+            $("#quiz-form").submit();
+        });
+    });
+</script>
+</body>
+
+
+
+</html>

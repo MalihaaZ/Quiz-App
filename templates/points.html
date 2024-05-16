@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}Points{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1 class="mt-5">Your Scores</h1>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Username</th>
+                <th scope="col">Points</th>
+                <th scope="col">Date</th>
+                <th scope="col">Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for score in scores %}
+            <tr>
+                <td>{{ score.username }}</td>
+                <td>{{ score.score }}</td>
+                <td>{{ score.timestamp.strftime('%Y-%m-%d') }}</td>
+                <td>{{ score.timestamp.strftime('%H:%M:%S') }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="{{ url_for('display_exercise') }}" class="btn btn-primary mt-4">Back to Exercise</a>
+</div>
+{% endblock %}

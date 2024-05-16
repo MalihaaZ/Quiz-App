@@ -1,0 +1,21 @@
+{
+    "sqltools.connections": [
+        {
+            "mssqlOptions": {
+                "appName": "SQLTools",
+                "useUTC": true,
+                "encrypt": true,
+                "abortTransactionOnError": false
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MSSQL",
+            "connectionTimeout": 1000000000,
+            "username": "maliha",
+            "password": "191410zz",
+            "database": "quiz_app",
+            "name": "MySQL80"
+        }
+    ]
+}

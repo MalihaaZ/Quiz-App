@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/instatue.css') }}">
+</head>
+
+<body id="body_login">
+    <a href="index.html" id="login_instatue">Instatue</a>
+    <section id="login">
+        <h2 id="Log_in">Log in</h2>
+        <label for="username">Username</label>
+        <input type="text" name="username" id="username" required>
+        <p><label for="password">Password</label>
+            <input type="text" name="password" required>
+        </p>
+        <a href="forgot">Forgot your username/password?</a><br>
+
+        <button id="loginButton">log in</button>
+
+
+        <hr>Don't have an account? <a href="sign_up.html">Sign up</a>
+    </section>
+
+</body>
+
+</html>

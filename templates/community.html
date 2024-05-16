@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}Community{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1 class="mt-5">Community</h1>
+    <form method="POST" action="/community">
+        <div class="form-group">
+            <label for="title">Title:</label>
+            <input type="text" class="form-control" id="title" name="title" required>
+        </div>
+        <div class="form-group">
+            <label for="content">Content:</label>
+            <textarea class="form-control" id="content" name="content" rows="3" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Post</button>
+    </form>
+    <hr>
+    <h2>Posts</h2>
+    <ul class="list-group">
+        {% for post in posts %}
+        <li class="list-group-item">
+            <h3>{{ post.title }}</h3>
+            <p>{{ post.content }}</p>
+            <small>Posted by {{ post.username }} on {{ post.timestamp }}</small>
+            <br>
+            <a href="{{ url_for('post', post_id=post.id) }}" class="btn btn-secondary btn-sm mt-2">View Comments</a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz Result</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style.css') }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5" aria-label="Quiz Results">Quiz Result</h1>   
+        <div class="result-summary">
+            <h2 aria-label="Your Score">Your score: {{ score }}/{{ total }}</h2>
+            {% if score/total >= passing_level %}
+                <h3 class="text-success" aria-label="Quiz Status: Passed">Passed! <i class="fas fa-check-circle"></i></h3>
+            {% else %}
+                <h3 class="text-danger" aria-label="Quiz Status: Not Passed">Not passed <i class="fas fa-times-circle"></i></h3>
+            {% endif %}
+        </div>
+
+        <h3 aria-label="Review Questions">Questions:</h3>
+        <ul class="list-group mt-3">
+            {% for result in results %}
+                <li class="list-group-item question-item">
+                    <p class="question-text">{{ result['question'] }}</p>
+                    <ul class="answer-list">
+                        <li class="list-group-item"><strong>Your Answer(s):</strong> {{ result['user_answers']|join(', ') }}</li>
+                        <li class="list-group-item"><strong>Answer(s):</strong> {{ result['correct_answers']|join(', ') }}</li>
+                        {% if result['is_correct'] %}
+                            <li class="list-group-item text-success">Correct <i class="fas fa-check"></i></li>
+                        {% else %}
+                            <li class="list-group-item text-danger">Incorrect <i class="fas fa-times"></i></li>
+                        {% endif %}
+                    </ul>
+                </li>
+            {% endfor %}
+        </ul>
+
+        <div class="action-buttons">
+            <a href="{{ url_for('display_exercise') }}" class="btn btn-primary mt-4" aria-label="Take Quiz Again">Take Quiz Again</a>
+        </div>
+    </div>
+</body>
+</html>

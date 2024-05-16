@@ -1,0 +1,35 @@
+[
+    {
+        "question_id": 1,
+        "question": "What number follows 5?",
+        "choices": ["6", "8", "10", "4"],
+        "correct_answers": ["6"]
+    },
+    {
+        "question_id": 2,
+        "question": "Which number is greater: 4 or 6?",
+        "choices": ["6", "8", "10", "4"],
+        "correct_answers": ["6"]
+    },
+    {
+        "question_id": 3,
+        "question": "What is the largest number of these: 1, 14, 7, 11?",
+        "choices": ["1", "14", "7", "10"],
+        "correct_answers": ["14"]
+    },
+    {
+        "question_id": 4,
+        "question": "How much do you need to add to 2 to get 5?",
+        "choices": ["2", "1", "3", "4"],
+        "correct_answers": ["3"]
+
+        
+    },
+    {
+        "question_id": 5,
+        "question": "Which shape has more corners: a triangle or a square?",
+        "choices": ["triangle", "square"],
+        "correct_answers": ["square"]
+    }
+
+]

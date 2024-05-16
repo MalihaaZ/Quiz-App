@@ -1,0 +1,393 @@
+/* login.css */
+#body_login {
+    background: url(images/p3.jpeg) fixed;
+    background-size: cover;
+}
+#login_instatue {
+    color: rgb(175, 54, 78);
+    text-decoration: none;
+    font-size: 35px;
+    margin-left: 2%;
+}
+#login {
+    border: 1px solid rgb(248, 250, 252);
+    padding: 30px;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 5%;
+    background-color: rgb(248, 250, 252);
+}
+#Log_in {
+    margin-left: 40%;
+    margin-top: -1px;
+}
+#loginButton {
+    margin-left: 43%;
+    margin-top: 4%;
+}
+
+
+/* sign_up.css */
+#body_signup {
+    background: url(images/p3.jpeg) fixed;
+    background-size: cover;
+}
+#sign_up {
+    border: 1px solid rgb(248, 250, 252);
+    padding: 30px;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 10%;
+    background-color: rgb(248, 250, 252);
+}
+#Signup {
+    margin-left: 30%;
+    margin-top: -1px;
+}
+#signupButton {
+    margin-left: 43%;
+    margin-top: 5%;
+}
+
+
+/* index.css */
+#homepage_header {
+    background-color: rgb(253, 243, 228);
+    color: rgb(115, 45, 51);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#homepage_instatue {
+    margin-left: 1%;
+}
+#homepage_nav {
+    margin-left: auto;
+}
+#homepage_nav a {
+    margin-left: 5px; 
+    margin-right: 40px;
+    text-decoration: none;
+    color: black;
+}
+#section1 {
+    background-color: rgb(115, 45, 51);
+    height: 450px;
+    position: relative; 
+    margin-top: -3%;
+}
+#picture1 {
+    margin-left: 55%;
+    width: 500px;
+    height: 400px;
+    position: absolute;
+    top: 30px;
+}
+#heading1 {
+    color: white;
+    font-size: 45px;
+    margin-right: 55%;
+    margin-left: 6%;
+    margin-bottom: 55px;  
+}
+#paragraph1 {
+    color: white;
+    font-size: 20px;
+    margin-right: 55%;
+    margin-left: 6%;
+}
+#paragraph_let {
+    color: white;
+    margin-left: 15%;
+    margin-top: 3%;
+    border:rgb(253, 243, 228);
+    width: 140px;
+    height: 25px;
+    background-color: rgb(244, 146, 43);
+    text-align: center;
+}
+#image-container {
+    display: flex;
+    justify-content: space-between;
+}
+#picture8 {
+    width: 300px;
+    height: 200px;
+    margin-left: 8%;
+}
+#picture10 {
+    width: 300px;
+    height: 200px;
+    margin-left: 0%;
+}
+#picture9 {
+    width: 300px;
+    height: 200px;
+    margin-right: 9%;
+}
+#heading-container {
+    display: flex;
+    justify-content: space-between;
+}
+#heading2 {
+    margin-left: 11%;
+}
+#heading3 {
+    margin-left: 6%;
+}
+#heading4 {
+    margin-right: 8%;
+}
+#paragraph-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: -10px;
+    margin-right: 4%;
+}  
+#paragraph2 {
+    margin-left: 4%;
+}
+#paragraph3 {
+    margin-left: 1%;
+}
+#paragraph4 {
+    margin-right: -4%;
+}
+#heading_how {
+    text-align: center;
+}
+footer {
+    background-color: rgb(253, 243, 228);
+    text-align: center;
+    margin-top: 5%;
+}
+
+
+/* browse.css */
+#body_browse {
+    display: flex;
+    align-items: flex-start;
+    background: url(images/p3.jpeg);
+    background-size: cover;
+}
+
+#header_browse {
+    width: 150px;
+    height: 650px;
+    padding: 30px;
+    background-color:white;
+}
+#browse_instatue {
+    color: rgb(115, 45, 51);
+    font-size: 35px;
+}
+
+#heading_grade {
+    margin-top: 150px;
+    margin-left: 20%;
+    color: black;
+}
+#heading_subject {
+    margin-top: 150px;
+    margin-left: 29%;
+    color: black; 
+}
+#div_grade {
+    margin-top: 210px;
+    margin-left: -52%;
+    color: black; 
+    background-color: white;
+    height: 50px;
+    padding: 20px;
+}
+#div_subject {
+    margin-top: 210px;
+    margin-left: 18%;
+    color: black; 
+    background-color: white;
+    height: 50px;
+    padding: 20px;
+}
+#label_browse {
+    font-size: 24px;
+    text-align: center;
+}
+#nav_browse a {
+    display: block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: black;
+    font-size: larger;
+}
+#a_browse {
+    margin-top: 35%;
+    margin-left: -35%;
+    text-decoration: none;
+    color: rgb(240, 239, 239);
+    background-color: rgb(175, 54, 78);
+    padding: 20px;
+    font-size: 20px;
+}
+
+
+/* exercise.css */
+#body_exercise {
+    background: url(images/p7.jpeg);
+}
+#optionsContainer {
+    display: none;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 10px;
+    z-index: 1;
+}
+
+#option_exercise:hover + #optionsContainer {
+    display: block;
+    margin-left: 9%;
+    margin-top: 7%;
+}
+
+.option {
+    display: block;
+    margin-bottom: 5px;
+    color: rgb(28, 28, 30);
+    cursor: pointer;
+}
+#ul_multiple {
+    margin-left: 35%;
+    margin-top: -40%;
+    font-size: 25px;
+}
+#star1 {
+    height: 150px;
+    width: 150px;
+    margin-left: 40%;
+    margin-top: -2%;
+}
+#star2 {
+    height: 150px;
+    width: 150px;
+    margin-left: 35%;
+    margin-top: -2%;
+}
+#star3 {
+    height: 150px;
+    width: 150px;
+    margin-left: 42%;
+    margin-top: -3%;
+}
+#star4 {
+    height: 150px;
+    width: 150px;
+    margin-left: 52%;
+    margin-top: -5%;
+}
+
+/* multiple_choice.css */
+#heading_multiple {
+    position: absolute;
+    margin-left: 40%;
+}
+
+/* short_answer.css */
+#heading_short {
+    position: absolute;
+    margin-left: 40%;
+}
+
+/* teacher_list.css */
+#teacher_table {
+    margin-left: 20%;
+    margin-top: 10%;
+    height: 300px;
+    width: 600px;
+    text-align: center;
+}
+
+#heading_teacher_list{
+    position: absolute;
+    margin-left: 48%;
+    margin-top: 3%;
+}
+
+/* student_list.css */
+#heading_student_list{
+    position: absolute;
+    margin-left: 48%;
+    margin-top: 3%;
+}
+
+/* unit.css */
+#heading_unit{
+    position: absolute;
+    margin-left: 46%;
+    margin-top: 8%;
+}
+#unit_table{
+    margin-left: 20%;
+    margin-top: 15%;
+    height: 200px;
+    width: 400px;
+    text-align: center;
+}
+
+#unit_button{
+    position: absolute;
+    margin-left: 60%;
+    margin-top: 9%;
+}
+
+/* community.css */
+#body_community {
+    background-image: url(images/p6.jpeg);
+    background-size: 101% 100%;
+}
+#math_reading {
+    position: absolute;
+    top: 10%;
+    right: 41%;
+    font-size: 20px;
+}
+#div_community, #div_community2, #div_community3  {
+    position: absolute;
+    top: 16%;
+    left: 50%;
+    right: 8%;
+    font-size: 15px;
+    text-align: justify;
+    display: none; 
+}
+#article1 {
+    position: absolute;
+    left: 20%;
+    top: 15%;
+}
+#toggleButton {
+    position: absolute;
+    left: 20%;
+    top: 21%;
+}
+#article2 {
+    position: absolute;
+    left: 20%;
+    top: 25%;
+}
+#toggleButton2 {
+    position: absolute;
+    left: 20%;
+    top: 31%;
+}
+#article3 {
+    position: absolute;
+    left: 20%;
+    top: 35%;
+}
+#toggleButton3 {
+    position: absolute;
+    left: 20%;
+    top: 41%;
+}
